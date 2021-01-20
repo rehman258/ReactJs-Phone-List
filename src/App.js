@@ -1,25 +1,40 @@
+import React,{Component} from 'react'
 import logo from './logo.svg';
 import './App.css';
+import Contacts from './components/Contacts.js'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+  constructor(){
+    super();
+    this.addContact = this.addContact.bind(this)
+  }
+  state = {
+    contacts: [
+      {
+        name: "rahman",
+        number: "565465465465"
+      },
+      {
+        name:"elnur",
+        number:"598821819"
+      }
+    ]
+  }
+  addContact(contact){
+    let {contacts} = this.state;
+    contacts.push(contact);
+    this.setState({
+      contacts
+    })
+   
+  }
+  render(){
+    return (
+      <div className="App">
+        <Contacts contacts ={this.state.contacts} addContact = {this.addContact}/>
+      </div>
+    );
+  }
 }
 
 export default App;

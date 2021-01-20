@@ -1,0 +1,35 @@
+.List_Area{
+	border-radius: 5px;
+	padding:0px 0px;
+	margin: 0px auto;
+}
+input{
+	width: 100%;
+	margin-bottom: 20px;
+	text-indent: 10px;
+	padding: 0px;
+	height: 25px;
+}
+.list li{
+	text-align: left;
+	padding: 5px;
+	margin-bottom: 15px;
+	border-radius: 5px;
+	background-color: lightgray;
+}
+.list li span{
+	display: block;
+}
+.list li span.name{
+	float: left;
+}
+.list li span.phone{
+	float: right;
+}
+.clearfix{
+	clear: both;
+}
+.addbtn{
+	width: 75px;
+	height: 25px;
+}
